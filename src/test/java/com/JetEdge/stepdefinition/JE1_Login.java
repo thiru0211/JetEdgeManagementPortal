@@ -27,7 +27,7 @@ public class JE1_Login {
 	public void user_is_navigating_to_jet_edge_url_is(String URL) {
 		System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 		ChromeOptions option=new ChromeOptions();
-		//option.addArguments("--headless=new");
+		option.addArguments("--headless=new");
 		driver=new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.get(URL);

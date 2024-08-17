@@ -1,7 +1,8 @@
 Feature: MS REPORT
 
   #@TC_27 to @TC_73 Already Created
-  #@TC_78 and @TC_79 need to createz
+  #@TC_78 and @TC_79 need to create
+  
   @TC_00
   Scenario: Sign In:Valid Check
     Given To Check MS Report User is navigating to JetEdge URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
@@ -315,32 +316,37 @@ Feature: MS REPORT
     And Click Close button In Owner Revenue Payable Tab
     Then close the MS Report Page
 
-  # These two need to correct because its not working
+   These two need to correct because its not working
   
-  #@TC_78
-  #Scenario: MS-REPORT:Run MS Report
-  # Given To Check MS Report User is navigating to JetEdge URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
-  #And To Check MS Report Enter The username and password are "thirumaran0828@outlook.com" and "Thirumaran@0828"
-  #Then click The Sign In button for MS Report Check
- # And Click Run MS Report button
- # Then Select Valid Details and Click View button
- # And Click Owner Revenue Payable Tab
- # Then Click Attach button In Owner Revenue Payable Tab
- # And Enter Valid Details In Owner Revenue Payable Tab
-  #Then Click Clear button In Owner Revenue Payable Tab
- # Then close the MS Report Page
+  @TC_78
+  Scenario: MS-REPORT:Run MS Report
+   Given To Check MS Report User is navigating to JetEdge URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+  And To Check MS Report Enter The username and password are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+  Then click The Sign In button for MS Report Check
+  And Click Run MS Report button
+  Then Select Valid Details and Click View button
+  And Click Owner Revenue Payable Tab
+  Then Click Attach button In Owner Revenue Payable Tab
+  And Enter Valid Notes Details In CHTR Trip ORA
+  Then Upload valid file in ORA Agreement in CHTR Trip ORA
+  And Upload valid file in Quote Agreement in CHTR Trip ORA
+  Then Click clear button in CHTR Trip ORA
+  Then close the MS Report Page
   
-  #@TC_79
-  #Scenario: MS-REPORT:Run MS Report
-  # Given To Check MS Report User is navigating to JetEdge URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
-  #And To Check MS Report Enter The username and password are "thirumaran0828@outlook.com" and "Thirumaran@0828"
-  #Then click The Sign In button for MS Report Check
-  #And Click Run MS Report button
- # Then Select Valid Details and Click View button
-  #  And Click Owner Revenue Payable Tab
-  #And Enter Valid Details In Owner Revenue Payable Tab
-  #Then Click Save button In Owner Revenue Payable Tab
-  #Then close the MS Report Page
+  @TC_79
+  Scenario: MS-REPORT:Run MS Report
+   Given To Check MS Report User is navigating to JetEdge URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+  And To Check MS Report Enter The username and password are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+  Then click The Sign In button for MS Report Check
+  And Click Run MS Report button
+  Then Select Valid Details and Click View button
+  And Click Owner Revenue Payable Tab
+  Then Click Attach button In Owner Revenue Payable Tab
+  And Enter Valid Notes Details In CHTR Trip ORA
+  Then Upload valid file in ORA Agreement in CHTR Trip ORA
+  And Upload valid file in Quote Agreement in CHTR Trip ORA
+  Then Click save button in CHTR Trip ORA
+  Then close the MS Report Page
   
   @TC_80
   Scenario: MS-REPORT:Run MS Report

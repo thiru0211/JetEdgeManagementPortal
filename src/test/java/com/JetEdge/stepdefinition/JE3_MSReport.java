@@ -9,6 +9,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,13 +34,13 @@ public class JE3_MSReport {
 	public void User_is_navigating_to_jet_edge_Signin_url_is(String URL) {
 		System.setProperty("webdriver.chrome.driver", ".\\Driver\\chromedriver.exe");
 		ChromeOptions option=new ChromeOptions();
-		option.addArguments("--headless=new");
+		//option.addArguments("--headless=new");
 		driver=new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.get(URL);
 	}
 
-	@And("To Check MS Report To Check MS Report Enter The username and password are {string} and {string}")
+	@And("To Check MS Report Enter The username and password are {string} and {string}")
 	public void Enter_The_username_and_password_are_and(String UserName, String Password) {
 		driver.findElement(By.id("txtUserName")).sendKeys(UserName);
 		driver.findElement(By.id("txtPassword")).sendKeys(Password);
@@ -54,7 +55,7 @@ public class JE3_MSReport {
 
 	@And("Click Payments In MS Report button")
 	public void Click_Payments_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
 		driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")).click();
 		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[1]/a/span"));
@@ -102,7 +103,7 @@ public class JE3_MSReport {
 
 	@And("Click Save button in Payments Page")
 	public void Click_Save_button_in_Payments_Page() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnSave")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_btnSave"));
 		ele.click();
@@ -118,7 +119,7 @@ public class JE3_MSReport {
 
 	@And("Click Back button in Payments Page")
 	public void Click_Back_button_in_Payments_Page()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnBack")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_btnBack"));
 		ele.click();
@@ -135,7 +136,7 @@ public class JE3_MSReport {
 
 	@And("Enter Details Payments Page")
 	public void Enter_Details_Payments_Page()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnBack")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_txtDate"));
 		ele.sendKeys("Test");
@@ -150,7 +151,7 @@ public class JE3_MSReport {
 
 	@Then("Click Clear button in Payments Page")
 	public void Click_Clear_button_in_Payments_Page()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnClear")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_btnClear"));
 		ele.click();
@@ -158,7 +159,7 @@ public class JE3_MSReport {
 
 	@And("Enter Details in Payments Page")
 	public void Enter_Details_in_Payments_Page() throws InterruptedException  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddlTailNo")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_ddlTailNo"));
 		Select sel=new Select(ele);
@@ -210,7 +211,7 @@ public class JE3_MSReport {
 
 	@Then("Click Edit Payment button")
 	public void Click_Edit_Payment_button()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvSetup_imbView_0")));
 		ele = driver.findElement(By.id("ContentPlaceHolder1_gvSetup_imbView_0"));
 		ele.click();
@@ -230,7 +231,7 @@ public class JE3_MSReport {
 
 	@And("Click Additional Cost In MS Report button")
 	public void Click_Additional_Cost_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
 		driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")).click();
 		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[2]/a/span"));
@@ -247,7 +248,7 @@ public class JE3_MSReport {
 
 	@And("Click Save button In MS Report button")
 	public void Click_Save_button_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnSave")));
 		driver.findElement(By.id("ContentPlaceHolder1_btnSave")).click();
 		try {
@@ -262,7 +263,7 @@ public class JE3_MSReport {
 
 	@And("Click Back button In MS Report button")
 	public void Click_Back_button_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnBack")));
 		driver.findElement(By.id("ContentPlaceHolder1_btnBack")).click();
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnAddNew")));
@@ -277,7 +278,7 @@ public class JE3_MSReport {
 
 	@And("Click Clear button In MS Report button")
 	public void Click_Clear_button_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnClear")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_txtAmount"));
 		ele.sendKeys("1234");
@@ -289,7 +290,7 @@ public class JE3_MSReport {
 
 	@And("Enter Valid Details In MS Report button")
 	public void Enter_Valid_Details_In_MS_Report_button() throws AWTException, InterruptedException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_txtCostName")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_txtCostName"));
 		String text = ele.getAttribute("value");
@@ -333,7 +334,7 @@ public class JE3_MSReport {
 
 	@Then("Upload the File In MS Report button")
 	public void Upload_the_File_In_MS_Report_button() throws InterruptedException, AWTException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnClear")));
 		//Upload the file
 		driver.findElement(By.xpath("//*[@id=\"ContentPlaceHolder1_AddOffSet\"]/div[5]")).click();
@@ -356,7 +357,7 @@ public class JE3_MSReport {
 
 	@And("Click Download button In MS Report button")
 	public void Click_Download_button_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvTemp_imgAttach_0")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_gvTemp_imgAttach_0"));
 		ele.click();
@@ -365,7 +366,7 @@ public class JE3_MSReport {
 
 	@And("Click Delete button In MS Report button")
 	public void Click_Delete_button_In_MS_Report_button() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvTemp_imbDelete_0")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_gvTemp_imbDelete_0"));
 		ele.click();
@@ -393,7 +394,7 @@ public class JE3_MSReport {
 
 	@And("Click Prepare MS Report button")
 	public void Click_Prepare_MS_Report_button()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
 		driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")).click();
 		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[3]/a/span"));
@@ -435,7 +436,7 @@ public class JE3_MSReport {
 
 	@And("Click Run MS Report button")
 	public void Click_Run_MS_Report_button()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
 		driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")).click();
 		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[5]/a/span"));
@@ -467,14 +468,14 @@ public class JE3_MSReport {
 
 	@And("Click Excel button In Run MS Report Page")
 	public void Click_Excel_button_In_Run_MS_Report_Page()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_imbExport")));
 		driver.findElement(By.id("ContentPlaceHolder1_imbExport")).click();
 	}
 
 	@And("Click Account Balance and Click Summary Tab")
 	public void Click_Account_Balance_and_Click_Summary_Tab()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_imbExport")));
 		//Click Account Balance Tab
 		driver.findElement(By.id("ContentPlaceHolder1_aSummary")).click();
@@ -484,14 +485,14 @@ public class JE3_MSReport {
 
 	@And("Click Owner Revenue Payable Tab")
 	public void Click_Owner_Revenue_Payable_Tab()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_aRevenue")));
 		driver.findElement(By.id("ContentPlaceHolder1_aRevenue")).click();
 	}
 
 	@Then("Click Attach button In Owner Revenue Payable Tab")
 	public void Click_Attach_button_In_Owner_Revenue_Payable_Tab()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvOwnerRevenuePayable_lnkORAAttch_0")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_gvOwnerRevenuePayable_lnkORAAttch_0"));
 		if(ele.isDisplayed()) {
@@ -504,7 +505,7 @@ public class JE3_MSReport {
 
 	@And("Click Close button In Owner Revenue Payable Tab")
 	public void Click_Close_button_In_Owner_Revenue_Payable_Tab()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("btnCHTRClose")));
 		driver.findElement(By.id("btnCHTRClose")).click();
 	}
@@ -512,7 +513,7 @@ public class JE3_MSReport {
 	@And("Enter Valid Details In Owner Revenue Payable Tab")
 	public void Enter_Valid_Details_In_Owner_Revenue_Payable_Tab() throws InterruptedException, AWTException  {
 		driver.switchTo().frame(driver.findElement(By.id("ContentPlaceHolder1_frmCHTRORA")));
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_txtTripNo")));
 		driver.findElement(By.id("ContentPlaceHolder1_txtTripNo")).clear();
 
@@ -520,7 +521,7 @@ public class JE3_MSReport {
 
 	@And("Click Monthly Expenses and Click Actual Flight Activity Tab")
 	public void Click_Monthly_Expenses_and_Click_Actual_Flight_Activity_Tab() {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("ContentPlaceHolder1_aExpenses")));
 		driver.findElement(By.id("ContentPlaceHolder1_aExpenses")).click();
 		driver.findElement(By.id("ContentPlaceHolder1_aFlightActivity")).click();
@@ -528,7 +529,7 @@ public class JE3_MSReport {
 
 	@Then("Enter Details In The Notes")
 	public void Enter_Details_In_The_Notes() throws InterruptedException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id("ContentPlaceHolder1_txtNotes")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_txtNotes"));
 		ele.clear();
@@ -539,7 +540,7 @@ public class JE3_MSReport {
 
 	@And("Click Download MS Report button")
 	public void Click_Download_MS_Report_button()  {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
 		driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")).click();
 		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[6]/a/span"));
@@ -548,7 +549,7 @@ public class JE3_MSReport {
 
 	@Then("Click Edit button in Download MS Report Page")
 	public void Click_Edit_button_in_Download_MS_Report_Page() throws InterruptedException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvSummary_imbView_0")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_gvSummary_imbView_0"));
 		ele.click();
@@ -556,7 +557,7 @@ public class JE3_MSReport {
 
 	@And("Click Back button in Download MS Report Page")
 	public void Click_Back_button_in_Download_MS_Report_Page() throws InterruptedException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnSumBack")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_btnSumBack"));
 		ele.click();
@@ -564,15 +565,269 @@ public class JE3_MSReport {
 
 	@And("Click Download button in Download MS Report Page")
 	public void Click_Download_button_in_Download_MS_Report_Page() throws InterruptedException {
-		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvTailDetails_imbView_0")));
 		ele=driver.findElement(By.id("ContentPlaceHolder1_gvTailDetails_imbView_0"));
 		ele.click();
 	}
-
-
-
-
-
+	@And("Enter Valid Notes Details In CHTR Trip ORA")
+	public void enter_valid_notes_details_in_chtr_trip_ora() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_txtNotes")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtNotes"));
+		ele.sendKeys("Test");
+	}
+	@Then("Upload valid file in ORA Agreement in CHTR Trip ORA")
+	public void upload_valid_file_in_ora_agreement_in_chtr_trip_ora() throws InterruptedException, AWTException {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_fuFile")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_fuFile"));
+		ele.click();
+		//Upload the file
+		Thread.sleep(2000);
+		String FilePath="C:\\Users\\thirumaran\\eclipse-workspace\\JetEdgeManagementPortal\\Files\\blank.pdf";
+		Robot robot = new Robot();
+		StringSelection selection = new StringSelection(FilePath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+	}
+	@And("Upload valid file in Quote Agreement in CHTR Trip ORA")
+	public void upload_valid_file_in_quote_agreement_in_chtr_trip_ora() throws AWTException, InterruptedException {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_FUQuote")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_FUQuote"));
+		ele.click();
+		//Upload the file
+		Thread.sleep(2000);
+		String FilePath="C:\\Users\\thirumaran\\eclipse-workspace\\JetEdgeManagementPortal\\Files\\blank.pdf";
+		Robot robot = new Robot();
+		StringSelection selection = new StringSelection(FilePath);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_V);
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(2000);
+	}
+	@Then("Click clear button in CHTR Trip ORA")
+	public void click_clear_button_in_chtr_trip_ora() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnClearORA")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnClearORA"));
+		ele.click();
+	}
+	@Then("Click save button in CHTR Trip ORA")
+	public void click_save_button_in_chtr_trip_ora() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnSaveORA")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnSaveORA"));
+		ele.click();
+	}
+	
+	@And("Click MS Report Inactive button in MS Report")
+	public void click_ms_report_inactive_button_in_ms_report() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span")));
+		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/a/span"));
+		ele.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[7]/a/span")));
+		ele1=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[2]/div/ul/li[7]/a/span"));
+		ele1.click();
+	}
+	@Then("Select valid tail in the dropdown in MS Report Inactive")
+	public void select_valid_tail_in_the_dropdown_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddltail")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddltail"));
+		Select sel=new Select(ele);
+		sel.selectByVisibleText("All");
+	}
+	@And("Select valid month in the tab in MS Report Inactive")
+	public void select_valid_month_in_the_tab_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_txtFromMonth")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtFromMonth"));
+		ele.click();
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("cal2_month_0_0")));
+		ele1=driver.findElement(By.id("cal2_month_0_0"));
+		ele1.click();
+	}
+	@Then("Click Download button in MS Report Inactive")
+	public void click_download_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvPending_imbView_0")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_gvPending_imbView_0"));
+		ele.click();
+	}
+	@Then("Click View button in MS Report Inactive")
+	public void click_view_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvPending_imbEdit_0")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_gvPending_imbEdit_0"));
+		ele.click();
+	}
+	@And("Select valid expense in the dropdown in Transaction tab")
+	public void select_valid_expense_in_the_dropdown_in_transaction_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddlFilterBy")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlFilterBy"));
+		Select sel=new Select(ele);
+		sel.selectByVisibleText("All Exhibits");
+	}
+	@Then("Select valid Hide Status in the dropdown in Transaction tab")
+	public void select_valid_hide_status_in_the_dropdown_in_transaction_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddlStatus")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlStatus"));
+		Select sel=new Select(ele);
+		sel.selectByVisibleText("All Transaction");
+	}
+	@And("Click the checkbox in Show Controlled Tail Expense in Transaction tab")
+	public void click_the_checkbox_in_show_controlled_tail_expense_in_transaction_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_cbControlled")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_cbControlled"));
+		ele.click();
+	}
+	@And("Click the Owner Pay radio button in Transaction tab")
+	public void click_the_owner_pay_radio_button_in_transaction_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rdoReportType_1")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rdoReportType_1"));
+		ele.click();
+	}
+	@And("Click the Owner Revenue tab button in MS Report Inactive")
+	public void click_the_owner_revenue_tab_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"liStep2\"]/a/span")));
+		ele=driver.findElement(By.xpath("//*[@id=\"liStep2\"]/a/span"));
+		ele.click();
+	}
+	@And("Click the Charter Flight Revenue button in Owner Revenue tab")
+	public void click_the_charter_flight_revenue_button_in_owner_revenue_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_0")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_0"));
+		ele.click();
+	}
+	@And("Click the Supplemental Crew Revenue button in Owner Revenue tab")
+	public void click_the_supplemental_crew_revenue_button_in_owner_revenue_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_1")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_1"));
+		ele.click();
+	}
+	@And("Click the Landing and Navigation Revenue button in Owner Revenue tab")
+	public void click_the_landing_and_navigation_revenue_button_in_owner_revenue_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_2")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_2"));
+		ele.click();
+	}
+	@And("Click the Cabin Attendants Revenue button in Owner Revenue tab")
+	public void click_the_cabin_attendants_revenue_button_in_owner_revenue_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_3")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_3"));
+		ele.click();
+	}
+	@And("Click the Rest Overnight Revenue button in Owner Revenue tab")
+	public void click_the_rest_overnight_revenue_button_in_owner_revenue_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_4")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rptRevenue_lblSubgroupName_4"));
+		ele.click();
+	}
+	@And("Click the Expense Invoice tab button in MS Report Inactive")
+	public void click_the_expense_invoice_tab_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/form/div[5]/div[1]/div[2]/div[2]/div/div/div/ul/li[3]/a/span")));
+		ele=driver.findElement(By.xpath("/html/body/form/div[5]/div[1]/div[2]/div[2]/div/div/div/ul/li[3]/a/span"));
+		ele.click();
+	}
+	@And("Click previous step button in Expense Invoice tab")
+	public void click_previous_step_button_in_expense_invoice_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnStep2")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnStep2"));
+		ele.click();
+	}
+	@And("Select valid expense in filter by field in Expense Invoice tab")
+	public void select_valid_expense_in_filter_by_field_in_expense_invoice_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddlFilterBy")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlFilterBy"));
+		Select sel=new Select(ele);
+		sel.selectByVisibleText("All Exhibits");
+	}
+	@And("Select valid option in Attachment Status field in Expense Invoice tab")
+	public void select_valid_option_in_attachment_status_field_in_expense_invoice_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_ddlAttachmentStatus")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlAttachmentStatus"));
+		Select sel=new Select(ele);
+		sel.selectByVisibleText("All");
+	}
+	@Then("Click download button in Expense Invoice tab")
+	public void click_download_button_in_expense_invoice_tab() {
+		ele=driver.findElement(By.id("ContentPlaceHolder1_gvExpense_imbAttach_123"));
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);",ele);
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_gvExpense_imbAttach_123")));
+		ele1=driver.findElement(By.id("ContentPlaceHolder1_gvExpense_imbAttach_123"));
+		ele1.click();
+	}
+	@And("Click next step button in Expense Invoice tab")
+	public void click_next_step_button_in_expense_invoice_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnNextStep")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnNextStep"));
+		ele.click();
+	}
+	@And("Click the Invoice audit tab button in MS Report Inactive")
+	public void click_the_invoice_audit_tab_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"liStep3_1\"]/a/span")));
+		ele=driver.findElement(By.xpath("//*[@id=\"liStep3_1\"]/a/span"));
+		ele.click();
+	}
+	@And("Click next step button in Invoice audit tab")
+	public void click_next_step_button_in_invoice_audit_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnNextStep")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnNextStep"));
+		ele.click();
+	}
+	@And("Click previous step button in Invoice audit tab")
+	public void click_previous_step_button_in_invoice_audit_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnStep2")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnStep2"));
+		ele.click();
+	}
+	@Then("Click the Flight Activity tab button in MS Report Inactive")
+	public void click_the_flight_activity_tab_button_in_ms_report_inactive() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"liStep4\"]/a/span")));
+		ele=driver.findElement(By.xpath("//*[@id=\"liStep4\"]/a/span"));
+		ele.click();
+	}
+	@Then("Click previous step button in Flight Activity tab")
+	public void click_previous_step_button_in_flight_activity_tab() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(5));
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("ContentPlaceHolder1_btnStep2")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnStep2"));
+		ele.click();
+	}
+	
 }
 

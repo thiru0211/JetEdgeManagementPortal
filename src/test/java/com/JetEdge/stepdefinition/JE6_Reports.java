@@ -1807,4 +1807,163 @@ public class JE6_Reports {
 		ele=driver.findElement(By.id("ContentPlaceHolder1_imbExport"));
 		ele.click();
 	}
+	
+	@And("Click The Flight Activity InActive button In Reports")
+	public void click_the_flight_activity_in_active_button_in_reports() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[6]/a/span")));
+		ele=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[6]/a/span"));
+		ele.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[6]/div/ul/li[5]/a/span")));
+		ele1=driver.findElement(By.xpath("//*[@id=\"kt_aside_menu\"]/ul/li[6]/div/ul/li[5]/a/span"));
+		ele1.click();
+	}
+	@Then("Click view button in Flight Activity InActive")
+	public void click_view_button_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_ButSubmit")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ButSubmit"));
+		ele.click();
+		try {
+			Alert alert = driver.switchTo().alert();
+			String text = alert.getText();
+			System.out.println("Alert Message Displayed Like : "+text);
+			alert.accept();
+		} catch (Exception e) {
+			System.out.println("No Alert Message Is Displayed");
+		}
+	}
+	
+	@Then("Select valid from month in Flight Activity InActive")
+	public void select_valid_from_month_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_txtFromMonth")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtFromMonth"));
+		ele.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("cal1_month_0_0")));
+		ele1=driver.findElement(By.id("cal1_month_0_0"));
+		ele1.click();
+		
+	}
+	@Then("Select valid tail in Flight Activity InActive")
+	public void select_valid_tail_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_ddlTailNo")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlTailNo"));
+		Select sel=new Select(ele);
+		sel.selectByIndex(1);
+	}
+	@And("Click Trip type radio button in Flight Activity InActive")
+	public void click_trip_type_radio_button_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_rdoType_0")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rdoType_0"));
+		ele.click();
+	}
+	@Then("Click excel button in Flight Activity InActive")
+	public void click_excel_button_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_imbExport")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_imbExport"));
+		ele.click();
+	}
+	@And("Click Leg type radio button in Flight Activity InActive")
+	public void click_leg_type_radio_button_in_flight_activity_in_active() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_rdoType_1")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_rdoType_1"));
+		ele.click();
+	}
+	@Then("Click goal setup button in Scheduling Tracker")
+	public void click_goal_setup_button_in_scheduling_tracker() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_btnAddNew")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnAddNew"));
+		ele.click();
+	}
+	@And("Click back button in Scheduling Tracker")
+	public void click_back_button_in_scheduling_tracker() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_btnBack")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnBack"));
+		ele.click();
+	}
+	@Then("Click add new button in Scheduling Tracker")
+	public void click_add_new_button_in_scheduling_tracker() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_btnAddNew")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnAddNew"));
+		ele.click();
+	}
+	@Then("Click close button in Quarter Goal")
+	public void click_close_button_in_quarter_goal() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("imgDenialsClose")));
+		ele=driver.findElement(By.id("imgDenialsClose"));
+		ele.click();
+	}
+	@Then("Click save button in Quarter Goal")
+	public void click_save_button_in_quarter_goal() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_btnSave")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_btnSave"));
+		ele.click();
+		try {
+			Alert alert = driver.switchTo().alert();
+			String text = alert.getText();
+			System.out.println("Alert Message Displayed Like : "+text);
+			alert.accept();
+		} catch (Exception e) {
+			System.out.println("No Alert Message Is Displayed");
+		}
+	}
+	@Then("Select valid tail number in Quarter Goal")
+	public void select_valid_tail_number_in_quarter_goal() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_ddlTail")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_ddlTail"));
+		Select sel=new Select(ele);
+		sel.selectByIndex(1);
+	}
+	@Then("Select valid effective from in Quarter Goal")
+	public void select_valid_effective_from_in_quarter_goal() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_txtEftFrom")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtEftFrom"));
+		ele.click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_CalendarExtender4_day_0_0")));
+		ele1=driver.findElement(By.id("ContentPlaceHolder1_CalendarExtender4_day_0_0"));
+		ele1.click();
+	}
+	@Then("Enter valid charter value {string} in Quarter Goal")
+	public void enter_valid_charter_value_in_quarter_goal(String CharterValue) {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_txtCharter")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtCharter"));
+		ele.sendKeys(CharterValue);
+	}
+	@Then("Enter valid Owner value {string} in Quarter Goal")
+	public void enter_valid_owner_value_in_quarter_goal(String OwnerValue) {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_txtOwner")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtOwner"));
+		ele.sendKeys(OwnerValue);
+	}
+	@And("Click edit button in Goal Setup")
+	public void click_edit_button_in_goal_setup() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_gvScheduler_imbView_0")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_gvScheduler_imbView_0"));
+		ele.click();
+	}
+	@And("Modify valid details in Quarter Goal")
+	public void modify_valid_details_in_quarter_goal() {
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofMinutes(1));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("ContentPlaceHolder1_txtCharter")));
+		ele=driver.findElement(By.id("ContentPlaceHolder1_txtCharter"));
+		String text = ele.getAttribute("value");
+		ele.clear();
+		ele1=driver.findElement(By.id("ContentPlaceHolder1_txtCharter"));
+		ele1.sendKeys(text);
+	}
 }

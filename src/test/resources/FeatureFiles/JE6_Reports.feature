@@ -482,7 +482,7 @@ Feature: Reports
     And Modify The Details In Flight Activity WPAX
     Then Click The Update button In Flight Activity WPAX
     Then Close The Reports Page
-
+    
   @TC_40
   Scenario: GL_WISE_EXPENSE:View Check
     Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
@@ -1196,3 +1196,108 @@ Feature: Reports
     And Click The Scheduling Tracker button In Reports
 		And Click Excel button In Scheduling Tracker
 		Then Close The Reports Page
+		
+		@TC_102
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click back button in Scheduling Tracker
+		Then Close The Reports Page
+		
+		@TC_103
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click add new button in Scheduling Tracker
+		Then Click close button in Quarter Goal
+		Then Close The Reports Page
+		
+		@TC_104
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click add new button in Scheduling Tracker
+		Then Click save button in Quarter Goal
+		Then Close The Reports Page
+		
+		@TC_105
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click add new button in Scheduling Tracker
+		Then Select valid tail number in Quarter Goal
+		And Select valid effective from in Quarter Goal
+		Then Enter valid charter value "20" in Quarter Goal
+		And Enter valid Owner value "10" in Quarter Goal
+		Then Click save button in Quarter Goal
+		Then Close The Reports Page
+		
+		@TC_106
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click edit button in Goal Setup
+		Then Click close button in Quarter Goal
+		Then Close The Reports Page
+		
+		@TC_107
+  Scenario: SCHEDULING TRACKER:GOAL SETUP
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Scheduling Tracker button In Reports
+		Then Click goal setup button in Scheduling Tracker
+		And Click edit button in Goal Setup
+		And Modify valid details in Quarter Goal
+		Then Click save button in Quarter Goal
+		Then Close The Reports Page
+		
+		@TC_108
+  Scenario: FLIGHT_ACTIVITY_InActive:View Check
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Flight Activity InActive button In Reports
+    Then Click view button in Flight Activity InActive
+    Then Close The Reports Page
+    
+    @TC_109
+  Scenario: FLIGHT_ACTIVITY_InActive:View Check
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Flight Activity InActive button In Reports
+    Then Select valid from month in Flight Activity InActive
+    Then Select valid tail in Flight Activity InActive
+    And Click Trip type radio button in Flight Activity InActive
+    Then Click view button in Flight Activity InActive
+    And Click excel button in Flight Activity InActive
+    Then Close The Reports Page
+    
+    @TC_110
+  Scenario: FLIGHT_ACTIVITY_InActive:View Check
+    Given To Check Reports User Is Navigating To Jet Edge Signin URL is "https://preprod.flyjetedge.aero/MGNTV2DEMO/login.aspx"
+    And To Check Reports Enter The User Name and Password Are "thirumaran0828@outlook.com" and "Thirumaran@0828"
+    Then Click The Sign In button for Reports Check
+    And Click The Flight Activity InActive button In Reports
+    Then Select valid from month in Flight Activity InActive
+    Then Select valid tail in Flight Activity InActive
+    And Click Leg type radio button in Flight Activity InActive
+    Then Click view button in Flight Activity InActive
+    And Click excel button in Flight Activity InActive
+    Then Close The Reports Page
